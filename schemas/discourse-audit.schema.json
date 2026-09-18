@@ -1,0 +1,214 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Authorial Editor Discourse Audit",
+  "type": "object",
+  "required": [
+    "overall_summary",
+    "features",
+    "flags",
+    "rewrite_priorities",
+    "do_not_change"
+  ],
+  "properties": {
+    "overall_summary": {
+      "type": "string"
+    },
+    "features": {
+      "type": "object",
+      "properties": {
+        "thesis_explicitness": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1,
+          "maximum": 5
+        },
+        "thesis_repetition": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1,
+          "maximum": 5
+        },
+        "causal_tidiness": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1,
+          "maximum": 5
+        },
+        "argument_branching": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1,
+          "maximum": 5
+        },
+        "closure_strength": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1,
+          "maximum": 5
+        },
+        "moralizing_weight": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1,
+          "maximum": 5
+        },
+        "reference_specificity": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1,
+          "maximum": 5
+        },
+        "reader_engagement": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1,
+          "maximum": 5
+        },
+        "temporal_discontinuity": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1,
+          "maximum": 5
+        },
+        "recontextualization": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1,
+          "maximum": 5
+        },
+        "ambiguity_preservation": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1,
+          "maximum": 5
+        },
+        "counterargument_depth": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1,
+          "maximum": 5
+        },
+        "example_specificity": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1,
+          "maximum": 5
+        },
+        "author_presence": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1,
+          "maximum": 5
+        },
+        "semantic_redundancy": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1,
+          "maximum": 5
+        },
+        "unjustified_sensory_embellishment": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1,
+          "maximum": 5
+        }
+      },
+      "required": [
+        "thesis_explicitness",
+        "thesis_repetition",
+        "causal_tidiness",
+        "argument_branching",
+        "closure_strength",
+        "moralizing_weight",
+        "reference_specificity",
+        "reader_engagement",
+        "temporal_discontinuity",
+        "recontextualization",
+        "ambiguity_preservation",
+        "counterargument_depth",
+        "example_specificity",
+        "author_presence",
+        "semantic_redundancy",
+        "unjustified_sensory_embellishment"
+      ],
+      "additionalProperties": false
+    },
+    "flags": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "feature",
+          "severity",
+          "evidence",
+          "reason"
+        ],
+        "properties": {
+          "feature": {
+            "type": "string"
+          },
+          "severity": {
+            "type": "string",
+            "enum": [
+              "low",
+              "medium",
+              "high"
+            ]
+          },
+          "evidence": {
+            "type": "string"
+          },
+          "reason": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "rewrite_priorities": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "do_not_change": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false
+}

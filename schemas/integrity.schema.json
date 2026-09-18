@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Authorial Editor Integrity Result",
+  "type": "object",
+  "required": [
+    "status",
+    "meaning_preservation",
+    "invented_claims",
+    "lost_claims",
+    "distorted_claims",
+    "source_changes",
+    "notes"
+  ],
+  "properties": {
+    "status": {
+      "type": "string",
+      "enum": [
+        "pass",
+        "warn",
+        "fail"
+      ]
+    },
+    "meaning_preservation": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 5
+    },
+    "invented_claims": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "lost_claims": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "distorted_claims": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "source_changes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "notes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false
+}

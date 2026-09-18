@@ -1,0 +1,97 @@
+version: 0.1.0-alpha.2
+status: experimental
+scope: editorial_nonfiction
+warning: >
+  These mappings adapt concepts from StoryScope to editorial/non-fiction text.
+  They are hypotheses for an editing system, not validated StoryScope findings
+  and must not be interpreted as human-vs-AI authorship probabilities.
+
+scale:
+  1: very_low_or_absent
+  2: low
+  3: moderate
+  4: high
+  5: very_high
+
+features:
+  - id: thesis_explicitness
+    label: Thesis explicitness
+    basis: Thematic Explicitness and Moralizing
+    adaptation: Measures how explicitly the article states its thesis instead of allowing evidence and argument to carry part of the inference.
+
+  - id: thesis_repetition
+    label: Thesis repetition
+    basis: Narratorial Thematic Commentary / thematic over-determination
+    adaptation: Measures how often the same conclusion is restated after it is already established.
+
+  - id: causal_tidiness
+    label: Causal tidiness
+    basis: Continuity of Main Causal Chain
+    adaptation: Measures whether reasoning is presented as a suspiciously clean single causal chain despite real uncertainty or branching.
+
+  - id: argument_branching
+    label: Argument branching
+    basis: Subplot Integration
+    adaptation: Measures legitimate side-arguments, counterexamples, and parallel lines of reasoning without rewarding irrelevant digression.
+
+  - id: closure_strength
+    label: Closure strength
+    basis: Structural streamlining / resolution mode
+    adaptation: Measures how completely the conclusion resolves ambiguity and closes open questions.
+
+  - id: moralizing_weight
+    label: Moralizing weight
+    basis: Moral / Philosophical Weighting
+    adaptation: Measures prescriptive or lesson-like framing that is not required by the evidence.
+
+  - id: reference_specificity
+    label: Reference specificity
+    basis: Intertextual Strategy / Reference Explicitness
+    adaptation: Measures use of concrete named sources, works, products, institutions, people, or documents when actually supported.
+
+  - id: reader_engagement
+    label: Reader engagement
+    basis: Direct Reader Address / Fourth-Wall Permeability
+    adaptation: Measures direct interaction with the reader, including questions and asides, without rewarding formulaic engagement bait.
+
+  - id: temporal_discontinuity
+    label: Temporal discontinuity
+    basis: Degree of Chronological Discontinuity / Anachrony Intensity
+    adaptation: Measures non-linear movement through time when the source material genuinely supports it.
+
+  - id: recontextualization
+    label: Recontextualization depth
+    basis: Depth of Recontextualization After Surprise
+    adaptation: Measures whether later evidence meaningfully changes the interpretation of earlier material.
+
+  - id: ambiguity_preservation
+    label: Ambiguity preservation
+    basis: Moral Polarity toward Protagonist / narrative ambiguity
+    adaptation: Measures whether unresolved uncertainty or conflicting evidence is preserved rather than artificially reconciled.
+
+  - id: counterargument_depth
+    label: Counterargument depth
+    basis: Narrative diversity / subplot integration
+    adaptation: Measures whether credible objections receive substantive treatment rather than token rebuttals.
+
+  - id: example_specificity
+    label: Example specificity
+    basis: Intertextual richness / location variety
+    adaptation: Measures concrete examples actually supported by the source material.
+
+  - id: author_presence
+    label: Author presence
+    basis: Perspective / reader engagement
+    adaptation: Measures visible authorial reasoning, qualified judgment, or first-person experience when genuinely present in the source.
+
+  - id: semantic_redundancy
+    label: Semantic redundancy
+    basis: Thematic over-determination
+    adaptation: Measures repetition of the same proposition in different wording without new evidence or reasoning.
+
+  - id: unjustified_sensory_embellishment
+    label: Unjustified sensory embellishment
+    basis: Sensory Density / embodied performativity
+    adaptation: >
+      In non-fiction, sensory or embodied detail is only acceptable when present
+      in the source. Invented sensory detail is treated primarily as an integrity problem.

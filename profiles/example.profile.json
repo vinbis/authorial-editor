@@ -1,0 +1,27 @@
+{
+  "schema_version": "0.1",
+  "profile_id": "example-author",
+  "description": "Synthetic example only. Replace with a private profile derived from a verified corpus.",
+  "language": "en",
+  "content_types": {
+    "analysis": {
+      "preferred_opening": "Start from a concrete observation before stating the full thesis.",
+      "thesis_placement": "early_but_not_first_sentence",
+      "objection_handling": "Treat strong objections before the conclusion.",
+      "closure": "Allow limited unresolved uncertainty.",
+      "reader_relationship": "Direct but not performative.",
+      "reference_behavior": "Prefer named primary sources.",
+      "first_person": "Use only for genuine experience.",
+      "forbidden_moves": [
+        "inventing personal anecdotes",
+        "generic motivational conclusion",
+        "repeating the thesis in every section"
+      ]
+    }
+  },
+  "hard_rules": [
+    "Never invent facts, experiences, quotations or sources.",
+    "Preserve uncertainty when present.",
+    "Do not imitate errors merely to appear human."
+  ]
+}

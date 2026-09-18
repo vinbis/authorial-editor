@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Authorial Editor Version Comparison",
+  "type": "object",
+  "required": [
+    "summary",
+    "meaning_changes",
+    "structural_changes",
+    "voice_changes",
+    "gains",
+    "risks"
+  ],
+  "properties": {
+    "summary": {
+      "type": "string"
+    },
+    "meaning_changes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "structural_changes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "voice_changes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "gains": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "risks": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false
+}

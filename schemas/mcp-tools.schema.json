@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Authorial Editor public MCP tool contract",
+  "type": "object",
+  "properties": {
+    "audit_text": {
+      "$ref": "#/$defs/auditInput"
+    },
+    "rewrite_text": {
+      "$ref": "#/$defs/auditInput"
+    },
+    "validate_text": {
+      "$ref": "#/$defs/validateInput"
+    },
+    "compare_versions": {
+      "$ref": "#/$defs/compareInput"
+    }
+  },
+  "$defs": {
+    "auditInput": {
+      "type": "object",
+      "required": [
+        "text"
+      ],
+      "properties": {
+        "text": {
+          "type": "string",
+          "minLength": 1
+        },
+        "content_type": {
+          "type": "string",
+          "default": "article"
+        },
+        "profile_json": {
+          "type": "string",
+          "default": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "validateInput": {
+      "type": "object",
+      "required": [
+        "original_text",
+        "candidate_text"
+      ],
+      "properties": {
+        "original_text": {
+          "type": "string",
+          "minLength": 1
+        },
+        "candidate_text": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "compareInput": {
+      "type": "object",
+      "required": [
+        "original_text",
+        "revised_text"
+      ],
+      "properties": {
+        "original_text": {
+          "type": "string",
+          "minLength": 1
+        },
+        "revised_text": {
+          "type": "string",
+          "minLength": 1
+        },
+        "profile_json": {
+          "type": "string",
+          "default": ""
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

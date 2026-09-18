@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use Authorial Editor in research or documentation, please cite this software and the StoryScope paper where methodologically relevant."
+title: "Authorial Editor"
+type: software
+version: "0.1.0-alpha.2"
+date-released: 2026-09-18
+authors:
+  - family-names: "Bisceglie"
+    given-names: "Vincenzo"
+repository-code: "https://github.com/vinbis/authorial-editor"
+license: AGPL-3.0-only
+preferred-citation:
+  type: software
+  title: "Authorial Editor"
+  version: "0.1.0-alpha.2"
+  authors:
+    - family-names: "Bisceglie"
+      given-names: "Vincenzo"
+  year: 2026

@@ -1,0 +1,109 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Authorial Editor Source Lock",
+  "type": "object",
+  "required": [
+    "thesis",
+    "claims",
+    "numbers",
+    "named_entities",
+    "links",
+    "quotes",
+    "personal_experiences",
+    "must_not_invent"
+  ],
+  "properties": {
+    "thesis": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "claim",
+          "kind",
+          "certainty",
+          "must_preserve"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "claim": {
+            "type": "string"
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "fact",
+              "opinion",
+              "experience",
+              "inference",
+              "instruction"
+            ]
+          },
+          "certainty": {
+            "type": "string",
+            "enum": [
+              "asserted",
+              "qualified",
+              "uncertain"
+            ]
+          },
+          "source_ref": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "must_preserve": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "numbers": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "named_entities": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "links": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "quotes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "personal_experiences": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "must_not_invent": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false
+}
